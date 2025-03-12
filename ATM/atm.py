@@ -9,9 +9,11 @@ while True:
 
     if type_num == 1:
         deposit_amount = input("입금할 금액을 입력해주세요. : ")
-        if deposit_amount != "" and deposit_amount > 0
-
-        print("입금 완료")
+        if deposit_amount.isdigit() and int(deposit_amount) > 0:
+            balance += int(deposit_amount)
+            print(f'{deposit_amount}원 입금 완료, 현재 잔액 {balance}원')
+        else:
+            print("입금 완료")
     elif type_num == 2:
         print("출금 완료")
     elif type_num == 3:
