@@ -13,9 +13,15 @@ while True:
             balance += int(deposit_amount)
             print(f'{deposit_amount}원 입금 완료, 현재 잔액 {balance}원')
         else:
-            print("입금 완료")
+            print("다시 입력해주세요.")
     elif type_num == 2:
-        print("출금 완료")
+        withdraw_amount = input("출금할 금액을 입력해주세요 : ")
+        if withdraw_amount.isdigit() and int(deposit_amount) >0:
+            withdraw_amount = min(balance, int(withdraw_amount))
+            balance -= withdraw_amount
+        else:
+            print("다시 입력해주세요.")
+        print(f"{withdraw_amount}원 출금 완료, 현재 잔액 {balance}원'")
     elif type_num == 3:
         print("영수증 보기")
     elif type_num == 4:
