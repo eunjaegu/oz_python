@@ -48,7 +48,7 @@ while True :
                 print(f"{i[0]} : {i[1]}원 | {i[2]}원")
         else :
             print("영수증 내역이 없습니다.")
-        break
-    if type_num == "4":
+   
+    if type_num == 4:
         print("서비스를 종료합니다.")
         break
